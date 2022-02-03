@@ -27,11 +27,7 @@ class App extends Component {
   };
 
   countTotalFeedback = () => {
-    let values = Object.values(this.state);
-    let total = -1;
-    for (const value of values) {
-      total += value;
-    }
+    const total = this.state.good + this.state.neutral + this.state.bad;
     return total;
   };
 
